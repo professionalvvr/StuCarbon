@@ -1,0 +1,8 @@
+{
+  "name": "student-carbon-footprint-calculator",
+  "version": "1.0.0",
+  "description": "Student Carbon Footprint Calculator web app",
+  "scripts": {
+    "test": "echo \"No tests specified\""
+  }
+}

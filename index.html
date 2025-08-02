@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Carbon Footprint Calculator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app">
+    <h1>Student Carbon Footprint Calculator</h1>
+    <div id="questionnaire">
+      <div id="step-grade" class="step">
+        <h2>Select your grade level</h2>
+        <button data-grade="middle">Middle School</button>
+        <button data-grade="high">High School</button>
+        <button data-grade="college">College</button>
+      </div>
+      <div id="step-question" class="step hidden">
+        <h2 id="question-text"></h2>
+        <input type="number" id="answer-input" min="0" />
+        <div class="controls">
+          <button id="next-btn">Next</button>
+        </div>
+        <div id="mountain">
+          <div id="mountain-fill"></div>
+        </div>
+      </div>
+      <div id="results" class="hidden">
+        <h2>Your Annual Emissions</h2>
+        <p id="total-emissions"></p>
+        <ul id="breakdown"></ul>
+        <p id="trees"></p>
+        <h3>Tips to reduce your impact</h3>
+        <ul id="tips"></ul>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
