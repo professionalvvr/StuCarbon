@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://YOUR_DOMAIN/</loc></url>
+  <url><loc>https://YOUR_DOMAIN/#/calculator</loc></url>
+  <url><loc>https://YOUR_DOMAIN/#/about</loc></url>
+  <url><loc>https://YOUR_DOMAIN/#/privacy</loc></url>
+  <url><loc>https://YOUR_DOMAIN/#/terms</loc></url>
+  <url><loc>https://YOUR_DOMAIN/#/contact</loc></url>
+  <url><loc>https://YOUR_DOMAIN/#/faq</loc></url>
+  <url><loc>https://YOUR_DOMAIN/#/sitemap</loc></url>
+</urlset>

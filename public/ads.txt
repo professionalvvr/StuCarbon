@@ -1,0 +1,2 @@
+# Replace with your publisher ID once approved:
+# google.com, pub-REPLACE_ME, DIRECT, f08c47fec0942fa0
