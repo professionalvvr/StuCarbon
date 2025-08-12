@@ -54,28 +54,18 @@ const countryFactors = {
   GL: { electricity: 0.85, transport: 1.0, food: 1.0, shopping: 1.0, digital: 1.0, housing: 1.0, misc: 1.0 },
 };
 
-// Silent country detection: IP first (no prompt), then locale fallback, then GL.
+// Silent country detection: IP first, then default to GL.
 async function detectCountryBetter() {
-  // 1) Try IP-based country (silent)
   try {
     const res = await fetch("https://ipapi.co/json/");
     const data = await res.json();
     const ipCode = data && data.country ? String(data.country).toUpperCase() : null;
     if (ipCode) return ipCode;
-  } catch {
-    // ignore network/JSON errors
-  }
+  } catch { /* ignore */ }
 
-  // 2) Fallback: reuse your existing locale guess (silent)
-  try {
-    return guessCountryCode();
-  } catch {
-    // ignore
-  }
-
-  // 3) Default
-  return "GL";
+  return "GL"; // fallback default
 }
+
 
 // -------------------------- Question Banks --------------------------
 const baseQuestions = {
@@ -514,7 +504,7 @@ const Page = ({ children }) => (
 
 export default function App() {
   const { path, push } = useHashRoute();
-  const [country, setCountry] = useState(guessCountryCode());
+  const [country, setCountry] = useState("GL");
   const [grade, setGrade] = useState(null);
   const [answers, setAnswers] = useState({});
   const [footprintId, setFootprintId] = useState(null);
